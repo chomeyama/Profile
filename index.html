@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name=”twitter:card” content=”summary“>
+  <meta name=”twitter:site” content=”@_riceham“>
+  <meta property='og:type' content="website">
+  <meta property='og:title' content="Reo YONEYAMA Profile Page">
+  <meta property='og:url' content="https://chomeyama.github.io/Profile/">
+  <meta property='og:description'
+    content="The profile page of Reo Yoneyama. If you have any questions, please contact me by email.">
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/49127218/117531375-2bc80100-b01d-11eb-8d2e-e213f1d14908.jpg">
+  <meta name="description" content="The profile page of Reo YONEYAMA">
+  <title>Reo YONEYAMA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css">
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="img/profile.jpg">
+  <link rel=”canonical” href=”https://chomeyama.github.io/Profile/”>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      const hum = $('#hamburger, .close')
+      const nav = $('.sp-nav')
+      hum.on('click', function () {
+        nav.toggleClass('toggle');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper" id="top">
+
+    <main class="content">
+      <!-- header -->
+      <header class="header">
+        <h1 class="logo"><a href="#top">Reo YONEYAMA</a></h1>
+        <nav class="pc-nav">
+          <ul id="nav">
+            <li id="nav"><a href="#careers">Careers</a></li>
+            <li id="nav"><a href="#publications">Publications</a></li>
+            <li id="nav"><a href="#experiences">Experiences</a></li>
+          </ul>
+        </nav>
+        <nav class="sp-nav">
+          <ul id="sp-nav">
+            <li id="sp-nav"><a href="#careers">Careers</a></li>
+            <li id="sp-nav"><a href="#publications">Publications</a></li>
+            <li id="sp-nav"><a href="#experiences">Experiences</a></li>
+            <li class="close"><span>Close</span></li>
+          </ul>
+        </nav>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </header>
+      <!-- /header -->
+
+
+      <!-- profile -->
+      <section class="section" id="profile">
+        <div class="inner">
+          <div class="profile">
+            <p class="profile-img">
+              <img src="img/profile.jpg" alt="">
+            </p>
+            <div class="profile-body">
+              <p>Nagoya University Graduate School of Informatics</p>
+              <p><a class="url" href="https://www.toda.is.i.nagoya-u.ac.jp/" target="_blank" rel="noopener">Toda
+                  Laboratory</a></p>
+              <p>Email: yoneyama.reo@g.sp.m.is.nagoya-u.ac.jp</p>
+              <p>Age: <a id="age"></a> (M1)</p>
+              <p>Researsh Interests: Speech Synthesis, Voice Conversion, Deep Learning</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- careers -->
+      <section class="section" id="careers">
+        <div class="careers">
+          <h2 class="title">Careers</h2>
+
+          <div class="careers-item">
+            <h3 class="subtitle">Education</h3>
+            <dl>
+              <dt>April 2021 -</dt>
+              <dd>TMI WISE
+                Program : Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation
+              </dd>
+              <dt>April 2021 -</dt>
+              <dd>Master's degree, Department of Intelligent Systems, Graduate School of Informatics, Nagoya University,
+                Japan</dd>
+              <dt>April 2017 - March 2021</dt>
+              <dd>Bachelor’s degree, Department of Computer Science, School of Informatics, Nagoya University, Japan
+              </dd>
+              <dt>March 2017</dt>
+              <dd>Graduated from Tochigi Prefectural Kanuma High School, Japan</dd>
+            </dl>
+          </div>
+
+          <div class="careers-item">
+            <h3 class="subtitle">Internships/Employments</h3>
+            <dl>
+              <dt>May 2021 - </dt>
+              <dd>R&D Engineering Internship at Voice Team in LINE Inc.</dd>
+              <dt>Dec. 2019 - April 2021 </dt>
+              <dd>R&D Engineering Internship at Acompany Inc.</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <!-- /careers -->
+
+      <!-- publications -->
+      <section class="section" id="publications">
+        <div class="publications">
+          <h2 class="title">Publications</h2>
+          <div class="publications-item">
+            <dl>
+              <dt>INTERSPEECH 2021</dt>
+              <dd>“Unified Source-Filter GAN: Unified Source-Filter Network Based On Factorization of Quasi-Periodic
+                Parallel WaveGAN” &nbsp; <a class="url" href="https://arxiv.org/abs/2104.04668" target="_blank"
+                  rel="noopener">[Paper]</a> &nbsp; <a class="url"
+                  href="https://github.com/chomeyama/UnifiedSourceFilterGAN" target="_blank" rel="noopener">[Code]</a>
+                &nbsp; <a class="url" href="https://chomeyama.github.io/UnifiedSourceFilterGAN_demo/" target="_blank"
+                  rel="noopener">[Demo]</a></dd>
+              <dt>音声研究会(SP) 2021</dt>
+              <dd>「統合型ソースフィルタネットワークによるニューラルボコーダ」 &nbsp; <a class="url"
+                  href="https://www.ieice.org/ken/paper/20210303iCDf/" target="_blank" rel="noopener">[Paper]</a></dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <!-- /publications -->
+
+      <!-- experiences -->
+      <section class="section" id="experiences">
+        <div class="experiences">
+          <h2 class="title">Experiences</h2>
+          <div class="experiences-item">
+            <dl>
+              <dt>Languages</dt>
+              <dd><b>Python</b> &nbsp; <b>C/C++</b> &nbsp; JavaScript &nbsp; HTML/CSS &nbsp; R</dd>
+              <dt>DL Frameworks</dt>
+              <dd><b>Pytorch</b> &nbsp; TensorFlow &nbsp; Keras</dd>
+              <dt>AtCoder</dt>
+              <dd>
+                <p><a class="url" href="https://atcoder.jp/users/chomeyama/" target="_blank"
+                    rel="noopener">chomeyama</a> (Highest rate: 1545)</p>
+              </dd>
+              <dt>Nov. 2020</dt>
+              <dd>ICPC Asia Yokohama Resional (Domestic qualifying)</dd>
+              <dt>Nov. 2019</dt>
+              <dd>ICPC Asia Yokohama Resional (Asian qualifying)</dd>
+              <dt>Oct. 2019</dt>
+              <dd>JPHACKS @ Nagoya</dd>
+              <dt>Sep. 2019</dt>
+              <dd>TOEIC Score 835 (Listening: 435, Reading: 400)</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <!-- /experiences -->
+
+      <!-- page-top -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+      <!-- /page-top -->
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-item">
+        <a class="copyright">Copyright&copy;2021.</a>
+        <a href="https://github.com/chomeyama/" target="_blank">
+          <img class="icon" src="img/GitHub-Mark-Light-120px-plus.png" alt="twitter">
+        </a>
+        <a href="https://twitter.com/_riceham/" target="_blank">
+          <img class="icon" src="img/Twitter social icons - circle - white.png" alt="twitter">
+        </a>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+
+</html>
