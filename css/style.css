@@ -2,7 +2,7 @@
 @import url(ress.css);
 
 body {
-  font-family: Gulim;
+  font-family: Meiryo;
   font-size: 14px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -247,7 +247,7 @@ footer .icon {
 
 @media screen and (max-width: 800px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.6;
   }
 
@@ -260,6 +260,7 @@ footer .icon {
     display: block;
   }
   dt {
+
     width: 100%;
     border-bottom: none;
     padding: 7px 0 5px 3px;
@@ -271,11 +272,11 @@ footer .icon {
   }
 
   header h1 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .pc-nav {
@@ -401,7 +402,7 @@ footer .icon {
   .profile img {
     float: none;
     display: block;
-    width: 32px;
+    width: 24px;
     margin: 0 auto;
   }
 
