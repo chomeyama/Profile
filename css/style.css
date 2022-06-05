@@ -35,31 +35,54 @@ dl {
 }
 
 dt {
-  font-weight: bold;
-  width: 20%;
-  font-family: arial, #010101;
+  width: 24%;
   border-bottom: solid 1px #c8c8c8;
   padding: 15px;
   font-size: 0.9em;
-  color: #2e2e2e
+  color: #444
 }
 
 dd {
-  width: 80%;
+  width: 76%;
   border-bottom: solid 1px #c8c8c8;
   padding: 15px;
-}
-
-.clearfix:after {
-  content: " ";
-  display: table;
-  clear: both;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.main {
+  width: 88%;
+  margin: 0 auto;
+  padding: 25px 0;
+  background-color: #ffffff;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.sectitle {
+  margin: 30px 0 15px 0;
+  position: relative;
+  padding-left: .5em;
+  border-left: 6px solid #666;
+  font-weight: bold;
+}
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 /*--------------------------------
@@ -137,7 +160,6 @@ nav {
  Profile
 ---------------------------------*/
 .profile {
-  margin-bottom: 20px;
   padding: 100px 0 20px 0;
   background-color: #efefef;
 }
@@ -152,12 +174,12 @@ nav {
 
 .profile p {
   padding-top: 15px;
-  color: #111;
 }
 
 .profile a {
-  color: #343434;
+  color: #0e0e0e
 }
+
 .profile a:hover {
   text-decoration: underline;
 }
@@ -165,43 +187,35 @@ nav {
 /*--------------------------------
  Education
 ---------------------------------*/
-.education a {
-  color: #444;
-}
-.education a:hover {
-  text-decoration: underline;
-}
 
 /*--------------------------------
  Employments
 ---------------------------------*/
-.employments a {
-  color: #444;
-}
-.employments a:hover {
-  text-decoration: underline;
-}
 
 /*--------------------------------
  Publications
 ---------------------------------*/
-.publications a {
-  color: #0ea9e9;
+
+/*--------------------------------
+ Awards
+---------------------------------*/
+.awards ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #d5d5d5;
+  margin: 6px auto 0 auto;
 }
-.publications a:hover {
-  text-decoration: underline;
+
+.awards li {
+  width: 90%;
+  border-bottom: solid 1px #c8c8c8;
+  padding: 15px;
 }
 
 /*--------------------------------
  Experiences
 ---------------------------------*/
-.experiences a {
-  color: #444;
-}
-.experiences a:hover {
-  text-decoration: underline;
-}
-
 
 /*--------------------------------
  Page-top
@@ -233,7 +247,7 @@ footer {
 }
 
 footer .copyright {
-  color: #eeeeee;
+  color: #ffffff;
 }
 
 footer .icon {
@@ -244,7 +258,6 @@ footer .icon {
 /*--------------------------------
  For Smartphones
 ---------------------------------*/
-
 @media screen and (max-width: 800px) {
   body {
     font-size: 14px;
@@ -259,12 +272,14 @@ footer .icon {
     width: 98%;
     display: block;
   }
+
   dt {
 
     width: 100%;
     border-bottom: none;
     padding: 7px 0 5px 3px;
   }
+
   dd {
     width: 100%;
     border-bottom: solid 1px #c8c8c8;
@@ -326,6 +341,7 @@ footer .icon {
     height: 2px;
     background-color: #fff;
   }
+
   #hamburger::after {
     content: "";
     display: block;
@@ -345,18 +361,22 @@ footer .icon {
     align-items: center;
     height: 100%;
   }
+
   .sp-nav li {
     font-size: 19px;
     margin: 15px 0;
     padding: 0;
   }
+
   .sp-nav li a {
     color: #fff;
   }
+
   .sp-nav li span {
     font-size: 16px;
     color: #fff;
   }
+
   .sp-nav li span {
     display: block;
     padding: 20px 0;
@@ -367,6 +387,7 @@ footer .icon {
     position: relative;
     padding-left: 20px;
   }
+
   .sp-nav .close::before {
     content: "";
     position: absolute;
@@ -378,6 +399,7 @@ footer .icon {
     background: #fff;
     transform: rotate(45deg);
   }
+
   .sp-nav .close::after {
     content: "";
     position: absolute;
