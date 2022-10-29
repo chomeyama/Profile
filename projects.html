@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name=”twitter:card” content=”summary“>
+  <meta name=”twitter:site” content=”@_riceham“>
+  <meta property='og:type' content="website">
+  <meta property='og:title' content="Reo YONEYAMA Profile">
+  <meta property='og:url' content="https://chomeyama.github.io/Profile/">
+  <meta property='og:description'
+    content="The profile page of Reo Yoneyama. If you have any questions, please contact me by email.">
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/49127218/117531375-2bc80100-b01d-11eb-8d2e-e213f1d14908.jpg">
+  <meta name="description" content="The profile page of Reo YONEYAMA">
+  <title>Reo YONEYAMA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/projects.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="img/meow.jpg">
+  <link rel=”canonical” href=”https://chomeyama.github.io/Profile/”>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      const hum = $('#hamburger, .close')
+      const nav = $('.sp-nav')
+      hum.on('click', function () {
+        nav.toggleClass('toggle');
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1><a href="main.html">Reo YONEYAMA</a></h1>
+      <nav class="pc-nav">
+        <ul id="nav">
+          <li id="nav"><a href="projects.html">Projects</a></li>
+          <li id="nav"><a href="https://github.com/chomeyama/" target="_blank">GitHub</a></li>
+          <li id="nav"><a href="https://twitter.com/_riceham/" target="_blank">Twitter</a></li>
+        </ul>
+      </nav>
+      <nav class="sp-nav">
+        <ul id="sp-nav">
+          <li id="sp-nav"><a href="projects.html">Projects</a></li>
+          <li id="sp-nav"><a href="https://github.com/chomeyama/" target="_blank">GitHub</a></li>
+          <li id="sp-nav"><a href="https://twitter.com/_riceham/" target="_blank">Twitter</a></li>
+          <li class="close"><span>Close</span></li>
+        </ul>
+      </nav>
+      <div id="hamburger">
+        <span></span>
+      </div>
+    </header>
+
+    <div class="main">
+
+      <h1 style="font-weight:normal;">Projects</h1>
+      <div class=" projects">
+        <ul>
+          <li>
+            <h2><a class="url" href="https://chomeyama.github.io/SiFiGAN-Demo/" target="_blank"
+                rel="noopener">Source-Filter HiFi-GAN: Fast and Pitch Controllable High-Fidelity Neural Vocoder</a></h2>
+            <p>Submitted to <a href="https://2023.ieeeicassp.org/" target="_blank">ICASSP 2023</a></p>
+            <p class="author"><b>Reo Yoneyama</b>, Yi-Chiao Wu, Tomoki Toda</p>
+          </li>
+          <li>
+            <h2><a class="url" href="https://chomeyama.github.io/DualCycleGAN-Demo/" target="_blank"
+                rel="noopener">Nonparallel High-Quality Audio Super Resolution with Domain Adaptation and Resampling
+                CycleGANs</a></h2>
+            <p>Submitted to <a href="https://2023.ieeeicassp.org/" target="_blank">ICASSP 2023</a></p>
+            <p class="author"><b>Reo Yoneyama</b>, Ryuichi Yamamoto, Kentaro Tachibana</p>
+          </li>
+          <li>
+            <h2><a class="url" href="https://r9y9.github.io/projects/nnsvs/" target="_blank" rel="noopener">NNSVS: A
+                Neural Network-Based Singing Voice Synthesis Toolkit</a></h2>
+            <p>Submitted to <a href="https://2023.ieeeicassp.org/" target="_blank">ICASSP 2023</a></p>
+            <p class="author">Ryuichi Yamamoto, <b>Reo Yoneyama</b>, Tomoki Toda</p>
+          </li>
+          <li>
+            <h2><a class="url" href="https://chomeyama.github.io/HN-UnifiedSourceFilterGAN-Demo/" target="_blank"
+                rel="noopener">Unified Source-Filter GAN with Harmonic-plus-Noise Source Excitation Generation</a></h2>
+            <p>Accepted to <a class="url"
+                href="https://www.isca-speech.org/archive/interspeech_2022/yoneyama22_interspeech.html"
+                target="_blank">INTERSPEECH 2022</a>
+            </p>
+            <p class="author"><b>Reo Yoneyama</b>, Yi-Chiao Wu, Tomoki Toda</p>
+          </li>
+          <li>
+            <h2><a class="url" href="https://chomeyama.github.io/UnifiedSourceFilterGAN-Demo/" target="_blank"
+                rel="noopener">Unified Source-Filter GAN: Unified Source-filter Network Based On Factorization of
+                Quasi-Periodic Parallel WaveGAN</a></h2>
+            <p>Accepted to <a class="url"
+                href="https://www.isca-speech.org/archive/interspeech_2021/yoneyama21_interspeech.html"
+                target="_blank">INTERSPEECH 2021</a></p>
+            <p class="author"><b>Reo Yoneyama</b>, Yi-Chiao Wu, Tomoki Toda</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-top" id="js-page-top">
+      <span class="material-icons-outlined">expand_less</span>
+    </div>
+
+    <footer>
+      <a class="copyright">Copyright&copy;2021.</a>
+      <a href="https://github.com/chomeyama/" target="_blank">
+        <img class="icon" src="img/github_icon.png" alt="GitHub icon">
+      </a>
+      <a href="https://twitter.com/_riceham/" target="_blank">
+        <img class="icon" src="img/twitter_icon.png" alt="Twitter icon">
+      </a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript' src="js/script.js"></script>
+</body>
+
+</html>
