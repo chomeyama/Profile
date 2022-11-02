@@ -134,8 +134,8 @@ nav {
 }
 
 .projects ul li {
-  line-height: 2;
-  padding: 8px 0 24px 0;
+  line-height: 1.8;
+  padding: 12px 0 26px 0;
 }
 
 .author {
@@ -189,10 +189,6 @@ footer .icon {
   body {
     font-size: 14px;
     line-height: 1.6;
-  }
-
-  selection {
-    width: 100%;
   }
 
   dl {
@@ -349,7 +345,7 @@ footer .icon {
   }
 
   .projects ul li {
-    line-height: 2;
-    padding: 8px 0 24px 0;
+    line-height: 1.6;
+    padding: 12px 0 26px 0;
   }
 }
