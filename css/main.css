@@ -183,7 +183,7 @@ nav {
 }
 
 /*--------------------------------
- Education
+ Educational background
 ---------------------------------*/
 .author {
   font-size: smaller;
@@ -192,7 +192,7 @@ nav {
 }
 
 /*--------------------------------
- Employments
+ Work experience
 ---------------------------------*/
 
 /*--------------------------------
@@ -200,9 +200,9 @@ nav {
 ---------------------------------*/
 
 /*--------------------------------
- Awards
+ Awards/Grants
 ---------------------------------*/
-.awards ul {
+.awards_grants ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -210,14 +210,14 @@ nav {
   margin: 6px auto 0 auto;
 }
 
-.awards li {
+.awards_grants li {
   width: 90%;
   border-bottom: solid 1px #c8c8c8;
   padding: 15px;
 }
 
 /*--------------------------------
- Experiences
+ Skills/Activities
 ---------------------------------*/
 
 /*--------------------------------
@@ -255,6 +255,13 @@ footer .copyright {
 
 footer .icon {
   width: 20px;
+  margin-left: 10px;
+}
+
+footer a i {
+  color: white;
+  font-size: 1.4em;
+  margin-top: 2px;
   margin-left: 10px;
 }
 
