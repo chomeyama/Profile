@@ -310,7 +310,7 @@ footer a i {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     display: block;
     opacity: 0;
     transform: translateY(-100%);
@@ -370,7 +370,7 @@ footer a i {
 
   .sp-nav li {
     font-size: 19px;
-    margin: 15px 0;
+    margin: 18px 0;
     padding: 0;
   }
 
