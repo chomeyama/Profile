@@ -2,17 +2,26 @@
 @import url(ress.css);
 
 body {
-  font-family: "Montserrat";
-  font-size: 14px;
+  font-family: serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  line-height: 1.8;
-  letter-spacing: 0.8px;
-  color: #0e0e0e;
+  letter-spacing: 0.05rem;
+  color: #222;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  /* 20px */
 }
 
 h2 {
-  font-size: 18px;
+
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  /* 18px */
 }
 
 a {
@@ -24,22 +33,23 @@ a {
 dl {
   display: flex;
   flex-wrap: wrap;
-  border-top: solid 1px #d5d5d5;
-  margin: 6px auto 0 auto;
+  margin: 0.5rem auto 0.5rem auto;
+  border-top: solid 0.065rem #ddd;
 }
 
 dt {
   width: 24%;
-  border-bottom: solid 1px #c8c8c8;
-  padding: 15px;
+  padding: 1rem;
+  font-family: serif;
   font-size: 0.9em;
-  color: #444
+  color: #222;
+  border-bottom: solid 0.065rem #ddd;
 }
 
 dd {
   width: 76%;
-  border-bottom: solid 1px #c8c8c8;
-  padding: 15px;
+  padding: 1rem;
+  border-bottom: solid 0.065rem #ddd;
 }
 
 .container {
@@ -52,7 +62,7 @@ dd {
   width: 92%;
   margin: 0 auto;
   padding: 25px 0;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .main a:hover {
@@ -65,18 +75,17 @@ dd {
 }
 
 .sectitle {
-  margin: 30px 0 15px 0;
-  position: relative;
-  padding-left: .5em;
-  border-left: 6px solid #666;
+  margin: 1rem 0 1rem 0;
+  padding-left: 0.5em;
+  border-left: 0.17rem solid #222;
   font-weight: bold;
 }
 
 .section {
   width: 97%;
   margin: 0 auto;
-  background-color: #ffffff;
-  padding-bottom: 16px;
+  background-color: #fff;
+  padding-bottom: 1rem;
 }
 
 .clearfix:after {
@@ -89,68 +98,51 @@ dd {
  Header
 ---------------------------------*/
 header {
-  width: 100%;
-  max-width: 1300px;
-  background-color: transparent;
+  position: fixed;
   display: flex;
-  align-items: center;
-  padding: 4px 0;
-  background-color: #343434;
+  width: 100%;
+  max-width: 80rem;
+  padding: 0.25rem 0;
+  background-color: #fff;
+  z-index: 2;
 }
 
 header h1 {
-  margin-left: 3%;
-  font-size: 20px;
-  font-weight: bold;
+  margin: 1rem auto 1rem 3rem;
+  z-index: 3;
 }
 
 header h1 a {
-  color: #fff;
+  color: #222;
+  ;
 }
 
 nav {
-  margin: 0 2% 0 auto;
+  margin: 1rem 3rem 1rem auto;
 }
 
-#nav ul {
+nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-#nav li {
-  margin-right: 20px;
-  font-size: 16px;
-  float: left;
+nav li {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
 }
 
-#nav li a {
-  position: relative;
-  display: inline-block;
-  padding: 5px 0;
-  transition: 0.3s;
-  letter-spacing: 0.05em;
-  color: #fff;
+nav li a {
+  transition: opacity 1s;
+  text-decoration: none;
+  color: #222;
 }
 
-#nav a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  content: "";
-  transition: 0.3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #fff;
+nav li a:hover {
+  color: rgba(5, 5, 5, 0.5);
 }
 
-#nav a:hover:after {
-  width: 100%;
-}
-
-.sp-nav {
+#menu-btn,
+.nav-hidden {
   display: none;
 }
 
@@ -158,38 +150,36 @@ nav {
  Profile
 ---------------------------------*/
 .profile {
-  padding: 25px 0 20px 0;
-  background-color: #efefef;
+  padding-top: 4.5rem;
 }
 
 .profile img {
   float: left;
-  width: 40px;
-  min-width: 190px;
-  margin: 10px 30px 15px 14%;
+  width: 2.5rem;
+  min-width: 12rem;
+  margin: 0.75rem 2rem 1rem 8%;
   border-radius: 50%;
 }
 
+.profile span {
+  font-family: san-serif;
+}
+
 .profile p {
-  padding-top: 32px;
+  margin: 2rem 2rem 0 0;
 }
 
 .profile a {
-  color: #0e0e0e
+  color: #222
 }
 
 .profile a:hover {
-  text-decoration: underline;
+  color: rgba(5, 5, 5, 0.5);
 }
 
 /*--------------------------------
  Educational background
 ---------------------------------*/
-.author {
-  font-size: smaller;
-  color: #111;
-  opacity: 0.7;
-}
 
 /*--------------------------------
  Work experience
@@ -198,6 +188,12 @@ nav {
 /*--------------------------------
  Publications
 ---------------------------------*/
+.author {
+  font-size: smaller;
+  color: #222;
+  padding: 0.5rem 0 0 0;
+  opacity: 0.8;
+}
 
 /*--------------------------------
  Awards/Grants
@@ -206,14 +202,14 @@ nav {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  border-top: solid 1px #d5d5d5;
-  margin: 6px auto 0 auto;
+  border-top: solid 0.07rem #ddd;
+  margin: 0.5rem auto 0 auto;
 }
 
 .awards_grants li {
   width: 90%;
-  border-bottom: solid 1px #c8c8c8;
-  padding: 15px;
+  border-bottom: solid 0.07rem #ddd;
+  padding: 1rem;
 }
 
 /*--------------------------------
@@ -224,55 +220,51 @@ nav {
  Page-top
 ---------------------------------*/
 .page-top {
-  margin-top: 20px;
-  padding: 7px 0;
+  padding: 0.5rem 0;
   text-align: center;
   cursor: pointer;
   font-weight: bold;
-  background-color: #4c4c4c;
+  background-color: #fff;
 }
 
 .page-top .material-icons-outlined {
   vertical-align: bottom;
-  color: #fff;
+  color: #222;
 }
 
 /*--------------------------------
  Footer
 ---------------------------------*/
 footer {
-  padding: 18px 0;
-  background-color: #343434;
+  width: 92%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  padding: 1rem 0;
+  border-top: solid;
+  border-color: #222;
+  border-width: 0.05rem;
+  background-color: #fff;
 }
 
 footer .copyright {
-  color: #ffffff;
-}
-
-footer .icon {
-  width: 20px;
-  margin-left: 10px;
+  font-size: 0.9rem;
+  color: #222;
+  margin-right: 0.5rem;
 }
 
 footer a i {
-  color: white;
+  width: 1.5rem;
+  color: #222;
   font-size: 1.4em;
-  margin-top: 2px;
-  margin-left: 10px;
+  margin-top: 0.125rem;
+  margin-left: 0.75rem;
 }
 
 /*--------------------------------
  For Smartphones
 ---------------------------------*/
-@media screen and (max-width: 800px) {
-  body {
-    font-size: 14px;
-    line-height: 1.6;
-  }
+@media screen and (max-width: 50rem) {
 
   dl {
     width: 98%;
@@ -280,161 +272,136 @@ footer a i {
   }
 
   dt {
-
     width: 100%;
     border-bottom: none;
-    padding: 7px 0 5px 3px;
+    padding: 0.5rem 0.25rem 0.5rem 0.25rem;
   }
 
   dd {
     width: 100%;
-    border-bottom: solid 1px #c8c8c8;
-    padding: 0 5px 7px 5px;
+    border-bottom: solid 0.07rem #ddd;
+    padding: 0.25rem 0.25rem 0.5rem 0.25rem;
   }
 
-  header h1 {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  .pc-nav {
-    display: none;
-  }
-
-  .sp-nav {
-    z-index: 1;
+  header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+  }
+
+  header h1 {
+    margin: 1rem auto 1rem 1.5rem;
+  }
+
+  #menu-btn {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    width: 3.2rem;
+    height: 3.2rem;
+    top: 1rem;
+    right: 1.5rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #222;
+  }
+
+  #menu-btn span,
+  #menu-btn span::before,
+  #menu-btn span::after {
+    position: absolute;
+    height: 0.15rem;
     width: 100%;
-    height: 75vh;
-    display: block;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all 0.2s ease-in-out;
-    background: #343434;
-  }
-
-  #hamburger {
-    position: relative;
-    display: block;
-    width: 28px;
-    height: 20px;
-    margin: 0 3% 0 auto;
-  }
-
-  #hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    transform: translateY(-50%);
-  }
-
-  #hamburger::before {
     content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-  }
-
-  #hamburger::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 70%;
-    height: 2px;
-    background-color: #fff;
-  }
-
-  .sp-nav ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-
-  .sp-nav li {
-    font-size: 19px;
-    margin: 18px 0;
-    padding: 0;
-  }
-
-  .sp-nav li a {
-    color: #fff;
-  }
-
-  .sp-nav li span {
-    font-size: 16px;
-    color: #fff;
-  }
-
-  .sp-nav li span {
-    display: block;
-    padding: 20px 0;
-  }
-
-  .sp-nav .close {
-    color: #fff;
-    position: relative;
-    padding-left: 20px;
-  }
-
-  .sp-nav .close::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 16px;
-    height: 1px;
+    border-radius: 0.5rem;
     background: #fff;
+    transition: 0.2s;
+  }
+
+
+  #menu-btn span {
+    width: 1.8rem;
+    top: 1.55rem;
+    right: 0.7rem;
+  }
+
+  #menu-btn span::before {
+    top: -0.6rem;
+  }
+
+  #menu-btn span::after {
+    top: 0.6rem;
+  }
+
+  #nav-input:checked~#menu-btn span {
     transform: rotate(45deg);
   }
 
-  .sp-nav .close::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 16px;
-    height: 1px;
-    background: #fff;
-    transform: rotate(-45deg);
+  #nav-input:checked~#menu-btn span::before {
+    opacity: 0;
   }
 
-  .toggle {
-    transform: translateY(0);
-    opacity: 1;
+  #nav-input:checked~#menu-btn span::after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+
+  nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 100vw;
+    z-index: 2;
+    margin: 0;
+    background: #fff;
+    transition: 0.5s;
+  }
+
+  nav ul {
+    display: block;
+    padding: 8rem 0 0 1.7rem;
+  }
+
+  nav li {
+    font-size: 2.3rem;
+    line-height: 4.2rem;
+    padding-left: 0;
+    padding-bottom: 4rem;
+    color: #222;
+  }
+
+  nav li a {
+    transition: opacity 1s;
+    text-decoration: none;
+    color: #222;
+  }
+
+  header #nav-input:checked~nav {
+    right: 0;
+    color: #222;
   }
 
   .profile {
-    padding: 60px 0 20px 0;
+    padding-top: 5rem;
   }
 
   .profile img {
     float: none;
     display: block;
-    width: 24px;
-    margin: 0 auto;
+    width: 1.5rem;
+    margin: 1rem auto 0 auto;
   }
 
   .profile p {
-    padding: 10px 30px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  footer .icon {
+    display: none;
   }
 }
