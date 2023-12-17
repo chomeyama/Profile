@@ -5,21 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta name=”twitter:card” content=”summary“>
-  <meta name=”twitter:site” content=”@_riceham“>
+  <meta name=”twitter:site” content=”@ricepamo“>
   <meta property='og:type' content="website">
-  <meta property='og:title' content="Reo YONEYAMA Profile">
+  <meta property='og:title' content="Reo YONEYAMA">
   <meta property='og:url' content="https://chomeyama.github.io/Profile/">
-  <meta property='og:description'
-    content="The profile page of Reo Yoneyama. If you have any questions, please contact me by email.">
-  <meta property="og:image"
-    content="https://user-images.githubusercontent.com/49127218/117531375-2bc80100-b01d-11eb-8d2e-e213f1d14908.jpg">
+  <meta property='og:description' content="The profile page of Reo Yoneyama.">
+  <meta property="og:image" type="image/png" content="img/meow.png">
   <meta name="description" content="The profile page of Reo YONEYAMA">
   <title>Reo YONEYAMA</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="css/projects.css" media="all" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="img/meow.jpg">
+  <link rel="icon" type="image/png" href="img/meow.png">
   <link rel=”canonical” href=”https://chomeyama.github.io/Profile/”>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
     crossorigin="anonymous"></script>
@@ -38,32 +37,26 @@
 
   <div class="container">
 
-    <header class="header">
-      <h1><a href="index.html">Reo YONEYAMA / Home</a></h1>
-      <nav class="pc-nav">
-        <ul id="nav">
-          <li id="nav"><a href="projects.html">Projects</a></li>
-          <li id="nav"><a href="https://github.com/chomeyama/" target="_blank">GitHub</a></li>
-          <li id="nav"><a href="https://twitter.com/_riceham/" target="_blank">Twitter</a></li>
+    <header>
+      <h1><a href="index.html">Reo YONEYAMA/Home</a></h1>
+
+      <input id="nav-input" type="checkbox" class="nav-hidden">
+      <label id="menu-btn" for="nav-input"><span></span></label>
+
+      <nav>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="https://github.com/chomeyama/" target="_blank">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&user=ihKGblgAAAAJ" target="_blank">Scholar</a></li>
+          <li><a href="https://twitter.com/ricepamo/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
         </ul>
       </nav>
-      <nav class="sp-nav">
-        <ul id="sp-nav">
-          <li id="sp-nav"><a href="projects.html">Projects</a></li>
-          <li id="sp-nav"><a href="https://github.com/chomeyama/" target="_blank">GitHub</a></li>
-          <li id="sp-nav"><a href="https://twitter.com/_riceham/" target="_blank">Twitter</a></li>
-          <li class="close"><span>Close</span></li>
-        </ul>
-      </nav>
-      <div id="hamburger">
-        <span></span>
-      </div>
     </header>
 
     <div class="main">
 
-      <h1 style="font-weight:normal;">Projects</h1>
-      <div class=" projects">
+      <div class="projects">
+        <h1 style="font-weight:normal;">Projects</h1>
         <ul>
           <li>
             <h2><a class="url" href="https://chomeyama.github.io/SiFiGAN-Demo/" target="_blank"
@@ -111,12 +104,15 @@
     </div>
 
     <footer>
-      <a class="copyright">Copyright&copy;2021.</a>
+      <a class="copyright">&copy; 2023 Reo Yoneyama</a>
       <a href="https://github.com/chomeyama/" target="_blank">
-        <img class="icon" src="img/github_icon.png" alt="GitHub icon">
+        <i class="fa-brands fa-github"></i>
       </a>
-      <a href="https://twitter.com/_riceham/" target="_blank">
-        <img class="icon" src="img/twitter_icon.png" alt="Twitter icon">
+      <a href="https://scholar.google.com/citations?hl=en&user=ihKGblgAAAAJ" target="_blank">
+        <i class="fa-brands fa-google-scholar"></i>
+      </a>
+      <a href="https://twitter.com/ricepamo/" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
     </footer>
 
