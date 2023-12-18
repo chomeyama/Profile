@@ -40,7 +40,7 @@ dl {
 dt {
   width: 24%;
   padding: 1rem;
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 0.9em;
   color: #222;
   border-bottom: solid 0.065rem #ddd;
@@ -189,7 +189,7 @@ nav li a:hover {
  Publications
 ---------------------------------*/
 .author {
-  font-size: smaller;
+  font-size: 0.875rem;
   color: #222;
   padding: 0.5rem 0 0 0;
   opacity: 0.8;
@@ -318,7 +318,7 @@ footer a i {
     content: "";
     border-radius: 0.5rem;
     background: #fff;
-    transition: 0.2s;
+    transition: 0.4s;
   }
 
 
@@ -358,7 +358,7 @@ footer a i {
     z-index: 2;
     margin: 0;
     background: #fff;
-    transition: 0.5s;
+    transition: 0.4s;
   }
 
   nav ul {

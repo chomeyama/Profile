@@ -250,7 +250,7 @@ footer a i {
     content: "";
     border-radius: 0.5rem;
     background: #fff;
-    transition: 0.2s;
+    transition: 0.4s;
   }
 
 
@@ -290,7 +290,7 @@ footer a i {
     z-index: 2;
     margin: 0;
     background: #fff;
-    transition: 0.5s;
+    transition: 0.4s;
   }
 
   nav ul {
