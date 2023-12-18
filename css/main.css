@@ -1,6 +1,12 @@
 @import url(sanitize.css);
 @import url(ress.css);
 
+:root {
+  --background-color: #fff;
+  --font-color: #222;
+  --link-color: #1199ee;
+}
+
 body {
   font-family: serif;
   font-size: 1rem;
@@ -8,7 +14,8 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   letter-spacing: 0.05rem;
-  color: #222;
+  color: var(--font-color);
+  background-color: var(--background-color);
 }
 
 h1 {
@@ -27,7 +34,7 @@ h2 {
 a {
   transition: opacity 1s;
   text-decoration: none;
-  color: #0066c0;
+  color: var(--link-color);
 }
 
 dl {
@@ -42,7 +49,7 @@ dt {
   padding: 1rem;
   font-family: sans-serif;
   font-size: 0.9em;
-  color: #222;
+  color: var(--font-color);
   border-bottom: solid 0.065rem #ddd;
 }
 
@@ -62,29 +69,29 @@ dd {
   width: 92%;
   margin: 0 auto;
   padding: 1.5rem 0;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .main a:hover {
   text-decoration: underline;
-  color: #0066c0;
+  color: var(--link-color);
 }
 
 .main a:visited {
-  color: #0066c0;
+  color: var(--link-color);
 }
 
 .sectitle {
   margin: 1rem 0 1rem 0;
   padding-left: 0.5em;
-  border-left: 0.17rem solid #222;
+  border-left: 0.17rem solid var(--font-color);
   font-weight: bold;
 }
 
 .section {
   width: 97%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--background-color);
   padding-bottom: 1rem;
 }
 
@@ -103,7 +110,7 @@ header {
   width: 100%;
   max-width: 80rem;
   padding: 0.25rem 0;
-  background-color: #fff;
+  background-color: var(--background-color);
   z-index: 2;
 }
 
@@ -113,7 +120,7 @@ header h1 {
 }
 
 header h1 a {
-  color: #222;
+  color: var(--font-color);
   ;
 }
 
@@ -134,7 +141,7 @@ nav li {
 nav li a {
   transition: opacity 1s;
   text-decoration: none;
-  color: #222;
+  color: var(--font-color);
 }
 
 nav li a:hover {
@@ -162,7 +169,7 @@ nav li a:hover {
 }
 
 .profile span {
-  font-family: san-serif;
+  font-family: sans-serif;
 }
 
 .profile p {
@@ -170,7 +177,7 @@ nav li a:hover {
 }
 
 .profile a {
-  color: #222
+  color: var(--font-color);
 }
 
 .profile a:hover {
@@ -190,7 +197,7 @@ nav li a:hover {
 ---------------------------------*/
 .author {
   font-size: 0.875rem;
-  color: #222;
+  color: var(--font-color);
   padding: 0.5rem 0 0 0;
   opacity: 0.8;
 }
@@ -224,12 +231,11 @@ nav li a:hover {
   text-align: center;
   cursor: pointer;
   font-weight: bold;
-  background-color: #fff;
 }
 
 .page-top .material-icons-outlined {
   vertical-align: bottom;
-  color: #222;
+  color: var(--font-color);
 }
 
 /*--------------------------------
@@ -242,23 +248,22 @@ footer {
   justify-content: center;
   padding: 1rem 0;
   border-top: solid;
-  border-color: #222;
+  border-color: var(--font-color);
   border-width: 0.05rem;
-  background-color: #fff;
 }
 
 footer .copyright {
   font-size: 0.9rem;
-  color: #222;
+  color: var(--font-color);
   margin-right: 0.5rem;
 }
 
 footer a i {
   width: 1.5rem;
-  color: #222;
+  color: var(--font-color);
   font-size: 1.4em;
   margin-top: 0.125rem;
-  margin-left: 0.75rem;
+  margin-left: 0.55rem;
 }
 
 /*--------------------------------
@@ -306,7 +311,8 @@ footer a i {
     padding: 0.2rem;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #222;
+    background-color: var(--font-color);
+    ;
   }
 
   #menu-btn span,
@@ -317,7 +323,8 @@ footer a i {
     width: 100%;
     content: "";
     border-radius: 0.5rem;
-    background: #fff;
+    background: var(--background-color);
+    ;
     transition: 0.4s;
   }
 
@@ -357,7 +364,7 @@ footer a i {
     right: 100vw;
     z-index: 2;
     margin: 0;
-    background: #fff;
+    background: var(--background-color);
     transition: 0.4s;
   }
 
@@ -371,18 +378,18 @@ footer a i {
     line-height: 4.2rem;
     padding-left: 0;
     padding-bottom: 4rem;
-    color: #222;
+    color: var(--font-color);
   }
 
   nav li a {
     transition: opacity 1s;
     text-decoration: none;
-    color: #222;
+    color: var(--font-color);
   }
 
   header #nav-input:checked~nav {
     right: 0;
-    color: #222;
+    color: var(--font-color);
   }
 
   .profile {
@@ -403,5 +410,13 @@ footer a i {
 
   footer .icon {
     display: none;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #222;
+    --font-color: #fff;
   }
 }
