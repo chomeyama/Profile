@@ -25,10 +25,20 @@ $(function () {
 
   // Calculate age
   var today = new Date();
-  var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+  var thisYearsBirthday = new Date(today.getFullYear(), birthday.month - 1, birthday.date);
   var age_value = today.getFullYear() - birthday.year;
-  if(today < thisYearsBirthday) age_value--;
+  if (today < thisYearsBirthday) age_value--;
   var age = document.getElementById("age")
   age.textContent = age_value;
   age.style.color = '#333';
+});
+
+// Switch theme (light and dark)
+const theme = document.querySelector("#theme");
+theme.addEventListener("change", () => {
+  if (theme.checked == true) {
+    document.documentElement.classList.add("dark-theme");
+  } else {
+    document.documentElement.classList.remove("dark-theme");
+  }
 });

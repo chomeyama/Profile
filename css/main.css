@@ -5,17 +5,16 @@
   --background-color: #fff;
   --line-color: #ddd;
   --font-color: #222;
-  --link-color: #1199ee;
-  --link-color2: rgba(5, 5, 5, 0.5);
+  --font-color2: rgba(5, 5, 5, 0.5);
+  --link-color: #1188dd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #222;
-    --line-color: #555;
-    --font-color: #fff;
-    --link-color2: rgba(250, 250, 250, 0.8);
-  }
+:root.dark-theme {
+  --background-color: #222;
+  --line-color: #555;
+  --font-color: #fff;
+  --font-color2: rgba(250, 250, 250, 0.8);
+  --link-color: #22aaff;
 }
 
 body {
@@ -27,6 +26,7 @@ body {
   letter-spacing: 0.05rem;
   color: var(--font-color);
   background-color: var(--background-color);
+  transition: .2s;
 }
 
 h1 {
@@ -42,11 +42,35 @@ h2 {
   /* 18px */
 }
 
-a {
+.blue_link {
   transition: opacity 1s;
   text-decoration: none;
   color: var(--link-color);
 }
+
+.blue_link:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+.blue_link:visited {
+  color: var(--link-color);
+}
+
+.link {
+  color: var(--font-color);
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: var(--font-color2);
+}
+
+.link:visited {
+  color: var(--font-color);
+}
+
 
 dl {
   display: flex;
@@ -80,16 +104,6 @@ dd {
   width: 92%;
   margin: 0 auto;
   padding: 1.5rem 0;
-  background-color: var(--background-color);
-}
-
-.main a:hover {
-  text-decoration: underline;
-  color: var(--link-color);
-}
-
-.main a:visited {
-  color: var(--link-color);
 }
 
 .sectitle {
@@ -102,7 +116,6 @@ dd {
 .section {
   width: 97%;
   margin: 0 auto;
-  background-color: var(--background-color);
   padding-bottom: 1rem;
 }
 
@@ -126,13 +139,30 @@ header {
 }
 
 header h1 {
-  margin: 1rem auto 1rem 3rem;
   z-index: 3;
+  margin: 1rem 0.75rem 1rem 3rem;
 }
 
 header h1 a {
   color: var(--font-color);
-  ;
+  text-decoration: none;
+}
+
+
+#theme-btn {
+  z-index: 3;
+  margin: auto auto auto 0;
+}
+
+#theme-btn input[type="checkbox"] {
+  display: none;
+}
+
+#theme-btn i {
+  padding: 0.125rem 0.25rem;
+  font-size: 1.25rem;
+  border: solid var(--font-color);
+  border-radius: 50%;
 }
 
 nav {
@@ -156,7 +186,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: var(--link-color2);
+  color: var(--font-color2);
 }
 
 #menu-btn,
@@ -187,14 +217,6 @@ nav li a:hover {
   margin: 2rem 2rem 0 0;
 }
 
-.profile a {
-  color: var(--font-color);
-}
-
-.profile a:hover {
-  color: var(--link-color2);
-}
-
 /*--------------------------------
  Educational background
 ---------------------------------*/
@@ -216,19 +238,6 @@ nav li a:hover {
 /*--------------------------------
  Awards/Grants
 ---------------------------------*/
-.awards_grants ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  border-top: solid 0.07rem var(--line-color);
-  margin: 0.5rem auto 0 auto;
-}
-
-.awards_grants li {
-  width: 90%;
-  border-bottom: solid 0.07rem var(--line-color);
-  padding: 1rem;
-}
 
 /*--------------------------------
  Skills/Activities
@@ -238,7 +247,7 @@ nav li a:hover {
  Page-top
 ---------------------------------*/
 .page-top {
-  padding: 0.5rem 0;
+  padding: 0.35rem 0;
   text-align: center;
   cursor: pointer;
   font-weight: bold;
@@ -304,26 +313,26 @@ footer a i {
     top: 0;
     left: 0;
     z-index: 1;
-    /* background-color: rgba(255, 255, 255, 0.8); */
   }
 
   header h1 {
-    margin: 1rem auto 1rem 1.5rem;
+    margin: 1rem 0.75rem 1rem 1.5rem;
   }
 
   #menu-btn {
     display: block;
     position: fixed;
+    box-sizing: border-box;
     z-index: 3;
-    width: 3.2rem;
-    height: 3.2rem;
-    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    top: 0.75rem;
     right: 1.5rem;
     padding: 0.2rem;
     border-radius: 50%;
     cursor: pointer;
-    background-color: var(--font-color);
-    ;
+    background-color: var(--background-color);
+    border: solid var(--font-color);
   }
 
   #menu-btn span,
@@ -334,16 +343,15 @@ footer a i {
     width: 100%;
     content: "";
     border-radius: 0.5rem;
-    background: var(--background-color);
-    ;
+    background: var(--font-color);
     transition: 0.4s;
   }
 
 
   #menu-btn span {
     width: 1.8rem;
-    top: 1.55rem;
-    right: 0.7rem;
+    top: 1.35rem;
+    right: 0.5rem;
   }
 
   #menu-btn span::before {
@@ -380,13 +388,14 @@ footer a i {
   }
 
   nav ul {
-    display: block;
-    padding: 8rem 0 0 1.7rem;
+    display: flex;
+    flex-direction: column;
+    margin: 15vh 0 0 1.5rem;
   }
 
   nav li {
     font-size: 2rem;
-    line-height: 4.2rem;
+    line-height: 10vh;
     padding-left: 0;
     padding-bottom: 4rem;
     color: var(--font-color);
