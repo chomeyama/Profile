@@ -327,11 +327,7 @@ footer a i {
     height: 2.8rem;
     top: 0.65rem;
     right: 1.35rem;
-    padding: 0.2rem;
-    border-radius: 50%;
     cursor: pointer;
-    background-color: var(--background-color);
-    border: solid var(--font-color);
   }
 
   #menu-btn span,
@@ -355,10 +351,12 @@ footer a i {
 
   #menu-btn span::before {
     top: -0.6rem;
+    width: 1.8rem;
   }
 
   #menu-btn span::after {
     top: 0.6rem;
+    width: 1.5rem;
   }
 
   #nav-input:checked~#menu-btn span {
@@ -371,6 +369,7 @@ footer a i {
 
   #nav-input:checked~#menu-btn span::after {
     top: 0;
+    width: 1.8rem;
     transform: rotate(-90deg);
   }
 
