@@ -33,12 +33,21 @@ $(function () {
   age.style.color = '#333';
 });
 
+// Check the local storage
+var theme = localStorage.getItem('theme');
+var theme_btn = document.getElementById('theme');
+if (theme === 'dark') {
+  document.documentElement.classList.add('dark-theme');
+  theme_btn.checked = true;
+}
+
 // Switch theme (light and dark)
-const theme = document.querySelector("#theme");
-theme.addEventListener("change", () => {
-  if (theme.checked == true) {
-    document.documentElement.classList.add("dark-theme");
+theme_btn.addEventListener("change", () => {
+  if (theme_btn.checked == true) {
+    document.documentElement.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
   } else {
-    document.documentElement.classList.remove("dark-theme");
+    document.documentElement.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
   }
 });
