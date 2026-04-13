@@ -1,13 +1,7 @@
-const birthday = {
-  year: 1999,
-  month: 3,
-  date: 7,
-};
-
 $(function () {
 
   // Page scroll
-  var navHeight = $(".header").outerHeight();
+  var navHeight = $("header").outerHeight();
 
   $('a[href^="#"]').on("click", function () {
     var href = $(this).attr("href");
@@ -23,23 +17,31 @@ $(function () {
     return false;
   });
 
-  // Calculate age
-  var today = new Date();
-  var thisYearsBirthday = new Date(today.getFullYear(), birthday.month - 1, birthday.date);
-  var age_value = today.getFullYear() - birthday.year;
-  if (today < thisYearsBirthday) age_value--;
-  var age = document.getElementById("age")
-  age.textContent = age_value;
-  age.style.color = '#333';
 });
 
 // Check the local storage
 var theme = localStorage.getItem('theme');
 var theme_btn = document.getElementById('theme');
+var theme_icon = document.getElementById('theme-icon');
+
+function updateThemeIcon() {
+  if (!theme_icon) {
+    return;
+  }
+
+  if (theme_btn.checked) {
+    theme_icon.className = 'bi bi-sun-fill';
+  } else {
+    theme_icon.className = 'bi bi-moon-fill';
+  }
+}
+
 if (theme === 'dark') {
   document.documentElement.classList.add('dark-theme');
   theme_btn.checked = true;
 }
+
+updateThemeIcon();
 
 // Switch theme (light and dark)
 theme_btn.addEventListener("change", () => {
@@ -50,4 +52,6 @@ theme_btn.addEventListener("change", () => {
     document.documentElement.classList.remove('dark-theme');
     localStorage.setItem('theme', 'light');
   }
+
+  updateThemeIcon();
 });

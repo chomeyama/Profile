@@ -1,37 +1,141 @@
-@import url(sanitize.css);
-@import url(ress.css);
 @import url(main.css);
 
-/*--------------------------------
- Projects
----------------------------------*/
-.projects h1 {
-  padding: 4rem 0 1rem 0;
+/* ================================================
+   Projects page layout
+================================================ */
+.projects {
+  padding: 5.5rem 0 2rem;
 }
 
+.projects>h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+/* ------------------------------------------------
+   Card Grid
+------------------------------------------------ */
 .projects ul {
   list-style-type: none;
-}
-
-.projects li {
-  line-height: 1.8;
-  padding: 0.75rem 0 1.5rem 0;
-}
-
-.projects a {
-  text-decoration: none;
-  color: var(--font-color);
-}
-
-.projects a:hover {
-  text-decoration: none;
-  color: var(--font-color2);
-}
-
-.projects a:visited {
-  color: var(--font-color);
-}
-
-.author {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  gap: 1.25rem;
   padding: 0;
+}
+
+/* ------------------------------------------------
+   Individual Card
+------------------------------------------------ */
+.project-card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+/* ------------------------------------------------
+   Venue badge
+------------------------------------------------ */
+.venue-badge {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 0.175rem 0.55rem;
+  border-radius: 0.25rem;
+  line-height: 1.7;
+  width: fit-content;
+}
+
+/* ------------------------------------------------
+   Card title
+------------------------------------------------ */
+.project-card h2 {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-weight: 600;
+  margin: 0.25rem 0 0;
+}
+
+.project-card h2 a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.project-card h2 a:hover {
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------
+   Author line
+------------------------------------------------ */
+.project-card .author {
+  margin-top: 0.25rem;
+  padding-top: 0;
+}
+
+/* ------------------------------------------------
+   Demo button
+------------------------------------------------ */
+.demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.85rem;
+  padding: 0.375rem 0.9rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 0.375rem;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
+  width: fit-content;
+  line-height: 1;
+}
+
+.demo-btn:hover {
+  background-color: var(--accent);
+  color: var(--surface);
+}
+
+/* ------------------------------------------------
+   Responsive
+------------------------------------------------ */
+@media screen and (max-width: 64rem) {
+  .projects ul {
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .projects ul {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding-top: 5rem;
+  }
 }
